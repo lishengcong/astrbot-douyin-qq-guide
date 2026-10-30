@@ -18,6 +18,11 @@
 - [第六部分：踩坑清单](#第六部分踩坑清单)
 - [附录：端口与文件位置](#附录端口与文件位置)
 
+**姊妹文档**
+
+- [用 Ollama 补上本地向量嵌入（长期记忆）](ollama-embedding.md) —— 记忆面板一直报
+  `Embedding Provider` 未就绪时看这篇
+
 ---
 
 ## 架构总览
@@ -413,6 +418,10 @@ AstrBot 的 `waking_check` 决定什么时候调用模型（不命中就完全�
 > 如果只配了对话模型、没配 embedding，`livingmemory` 会一直重试
 > `等待 Provider 就绪（未就绪: Embedding Provider）`，60 次后放弃。
 
+**官方 DeepSeek 和常见中转站都没有 embedding 接口**，最省事的做法是本地跑一个 Ollama。
+完整步骤（含代理环境下 `ollama pull` 拉不动模型的解法）见 →
+**[用 Ollama 补上本地向量嵌入](ollama-embedding.md)**
+
 ---
 
 ## 第六部分：踩坑清单
@@ -530,7 +539,7 @@ $sc.Save()
   只能主动去某个作品下**发**评论（`astrbot_plugin_douyin_dm` 支持）。
 - **抖音群聊**：适配器支持群消息收发，但需要账号本身已加入该群。
 - **`reply` 段只能收不能发**：视频/音频/文件同理。
-- **长期记忆**：需要额外配置向量嵌入模型。
+- **长期记忆**：需要额外配置向量嵌入模型，详见 [用 Ollama 补上本地向量嵌入](ollama-embedding.md)。
 
 ---
 
