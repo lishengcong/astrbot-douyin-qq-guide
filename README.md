@@ -1,6 +1,6 @@
 # AstrBot + 抖音/QQ 双平台接入指南（Windows 本机部署）
 
-> 一份踩过坑的实录。目标：在**一台 Windows 电脑**上，用 AstrBot 同时接入 **QQ** 和 **抖音**，
+> 目标：在**一台 Windows 电脑**上，用 AstrBot 同时接入 **QQ** 和 **抖音**，
 > 让她能用同一个人格、同一个模型在两个平台上聊天。
 >
 > 全程 **不需要 Docker、不需要云服务器、不需要管理员权限**（除个别可选步骤）。
@@ -50,9 +50,7 @@ QQ 客户端 ──hook──► SnowLuma ──OneBot v11 反向WS──┐
 
 ### 为什么不用 Docker
 
-Docker 的价值是隔离和可移植，单机自用不需要。而且在本机实测中，Docker Desktop 的数据盘默认落在
-`C:\Users\<用户>\AppData\Local\Docker`，拉镜像时会把系统盘撑满（本次踩坑：C 盘 0 字节，
-连 `docker` 命令都报 `ENOSPC`）。AstrBot 是纯 Python 程序，原生跑更轻。
+Docker 的价值是隔离和可移植，单机自用不需要。AstrBot 是纯 Python 程序，原生跑更轻。
 
 ### 1.1 安装（官方脚本，不需要管理员）
 
