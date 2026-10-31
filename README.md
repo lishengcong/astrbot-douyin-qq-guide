@@ -22,6 +22,13 @@
 
 - [用 Ollama 补上本地向量嵌入（长期记忆）](ollama-embedding.md) —— 记忆面板一直报
   `Embedding Provider` 未就绪时看这篇
+- [从 AstrBot 迁移到 DSH 的可行性与分期计划](dsh-migration-plan.md) —— 暂定方案，未实施
+- [自动维护「熟人名单」（主动消息）](auto-familiar.md) —— 让机器人自己判断该主动找谁聊
+
+**备选方案（未实施）**
+
+- [用 ADB 真机让 AI「亲自玩抖音」](adb-android-idea.md) —— 刷视频/评论/发布的唯一低风控路线，
+  需要一台常开的 Android 设备
 
 ---
 
